@@ -18,8 +18,7 @@ test: lib
 	LUA_CPATH=./src/?.so lua tests/test.lua
 
 install:
-	mkdir -p $(DESTDIR)$(LUA_LIBDIR)
-	cp src/lfs.so $(DESTDIR)$(LUA_LIBDIR)
+	cp src/lfs.so $(ROOT)/luaclib/
 
 clean:
 	rm -f src/lfs.so $(OBJS)
